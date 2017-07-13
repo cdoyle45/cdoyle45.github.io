@@ -875,6 +875,7 @@ ul.portfolioContainer {
 	display:block;
 	padding:0px;
 	list-style-type:none;
+	background-color: #f3f2f3;
 }
 ul.portfolioContainer li {
 	display:block;
@@ -922,7 +923,7 @@ span.hoverBox .smallIcon {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin-left: -47px;
+	margin-left: -20%;
 	margin-top: -21px;
 }
 span.hoverBox .zoom {
