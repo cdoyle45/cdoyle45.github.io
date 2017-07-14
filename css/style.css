@@ -509,8 +509,13 @@ header {
 .aboutme .proPic{
 	position:relative;
 	z-index:1;
+	min-height: 650px;
 	max-height:650px !important;
 	overflow:hidden;
+	background-size: cover;
+	background: url(../images/profpicture.png) left bottom no-repeat;
+
+
 }
 #description{
 	height:200px;
@@ -530,7 +535,7 @@ header {
 	bottom:0;
 	width:100%;
 	z-index:2;
-	background:url(http://placehold.it/1024x683) no-repeat 50% 50%;
+	background: url(../images/profpicture.png) left bottom no-repeat;
 	min-height: 100%;
 	min-width: 100%;
 	background-size: cover;
