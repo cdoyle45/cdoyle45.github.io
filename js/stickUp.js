@@ -54,14 +54,14 @@
                 } else if (!isNaN(parseInt(options.topMargin))) {
                     return parseInt(options.topMargin);
                 } else {
-                    console.log("incorrect argument, ignored.");
+                    //console.log("incorrect argument, ignored.");
                     return 0;
                 }
             }
         },
 
         unStick = function(){
-            console.log('unStick()');
+            //console.log('unStick()');
             $placeholder.remove();
             $element.removeClass(options.fixedClass)
             .css({
@@ -84,7 +84,7 @@
         },
 
         holdIt = function(forceBottom){
-            console.log('holdIt()');
+            //console.log('holdIt()');
             $element.before($placeholder.css('height', outerHeight));
             var offsetParent = $placeholder.offsetParent();
 
@@ -97,8 +97,8 @@
                     - offsetParent.offset().top - currentOuterHeight //parent-position - elementHeight
                     - parseInt($parent.css("paddingBottom"));
             }
-            console.log($parent.offset().top + $parent.outerHeight());
-            console.log(offsetParent.offset().top - currentOuterHeight);
+            //console.log($parent.offset().top + $parent.outerHeight());
+            //console.log(offsetParent.offset().top - currentOuterHeight);
             $element.css({
                 position: "absolute",
                 marginTop: topMargin,
@@ -108,7 +108,7 @@
             });
         },
         stickIt = function(){
-            console.log('stickIt()');
+            //console.log('stickIt()');
             active = true;
             $element.before($placeholder.css('height', outerHeight));
             $element.addClass(options.fixedClass);
@@ -126,7 +126,7 @@
             });
         },
         stickAtBottom = function(){
-            console.log('stickAtBottom');
+            //console.log('stickAtBottom');
             $element.before($placeholder.css('height', outerHeight));
             $element.addClass(options.fixedClass);
             var bottomDistance = -offset;//-offset;
@@ -167,7 +167,7 @@
         stickUpScrollHandlerFn = function (event) {
             if(!options.disableOn()){
                 if(!disabled){
-                    console.log('disable');
+                    //console.log('disable');
                     unStick();
                     disabled = true;
                 }
@@ -210,7 +210,7 @@
                     landscape = false;
                 }
                 if( hold && scrollDir === 'up' && scroll <= elementOffset - topMargin){
-                    console.log('sticktop');
+                    //console.log('sticktop');
                     stickIt();
                     active = true;
                     bottom = false;
@@ -220,7 +220,7 @@
                 && (!options.keepInWrapper || options.keepInWrapper && scrollBottom <= stickpoints.bottom)
                 && scrollBottom >= elementOffsetBottom - topMargin
                 ){
-                    console.log('stickAtBottom');
+                    //console.log('stickAtBottom');
                     stickAtBottom();
                     bottom = true;
                     active = true;
@@ -229,7 +229,7 @@
                 if(!hold && active && bottom && scrollDir === 'up'
                 || !hold && active && !bottom && scrollDir === 'down'
                 && elementOffsetBottom >= scrollBottom){
-                    console.log('holdIt');
+                    //console.log('holdIt');
                     holdIt();
                     active = false;
                     bottom = false;
@@ -239,7 +239,7 @@
                 if(scrollBottom >= stickpoints.bottom && options.keepInWrapper //scroll past stickpoint while keepInWrapper
                 && (!bottom && !hold //not applied yet
                 || parseInt(elementOffsetBottom-topMargin) !== parseInt(stickpoints.bottom))){ // or element past stickpoint
-                    console.log('forceBottom');
+                    //console.log('forceBottom');
                     holdIt(true);
                     active = false;
                     bottom = true;
@@ -260,7 +260,7 @@
 
                 if(!active && !bottom && scroll >= stickpoints.top - topMargin + offset
                 || bottom && hold && scroll <= elementOffset - topMargin + offset){
-                    console.log('sticktop');
+                    //console.log('sticktop');
                     stickIt();
                     active = true;
                     bottom = false;
@@ -270,7 +270,7 @@
                 if(options.keepInWrapper
                 && parseInt(elementOffsetBottom - topMargin) !== parseInt(stickpoints.bottom)
                 && scroll >= stickpoints.bottom - currentOuterHeight + offset){
-                    console.log('forceBottom p');
+                    //console.log('forceBottom p');
                     holdIt(true);
                     active = false;
                     bottom = true;
@@ -290,7 +290,7 @@
             }
             //UNSTICK
             if ((active || hold || bottom) && scroll <= stickpoints.top - topMargin) {
-                console.log('unstick');
+                //console.log('unstick');
                 unStick();
             }
             //RESPONSIVE baby ;-)
@@ -307,7 +307,7 @@
                 holdIt();
                 bottom = false;
             }
-            console.log('resize');
+            //console.log('resize');
                 stickUpScrollHandlerFn(event);
 
         };

@@ -333,7 +333,7 @@ Like masonry column shift, but works. */
 			self.colWidth = self.el.clientWidth - self.pl - self.pr;
 
 			self.lastItems.length = ~~(self.colWidth / o.colMinWidth) || 1; //needed length
-			console.log(o.colMinWidth)
+			//console.log(o.colMinWidth)
 
 			var top = o.useTranslate3d ? 0 : self.pt;
 			for (i = 0; i < self.lastItems.length; i++) {
@@ -412,7 +412,7 @@ Like masonry column shift, but works. */
 				floatCol = e.floatCol;
 
 			//console.log('------ item:' + e.innerHTML)
-			//console.log('span:'+span)			
+			//console.log('span:'+span)
 
 			//Find pro→per column to place item
 			//console.log(colPriority)

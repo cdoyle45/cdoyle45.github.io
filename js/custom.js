@@ -1,9 +1,9 @@
 
-(function($) { 
+(function($) {
 	"use strict";
 //For background slider
 $(function() {
-			
+
 	$( '#ri-grid' ).gridrotator( {
 		rows		: 4,
 		columns		: 8,
@@ -11,7 +11,7 @@ $(function() {
 		animSpeed	: 1000,
 		interval	: 600,
 		step		: 1,
-		
+
 		w1024		: {
 			rows	: 5,
 			columns	: 6
@@ -48,11 +48,11 @@ $(window).load(function(){
             queue: false
         }
     });
- 
+
     $('.portfolioFilter a').click(function(){
         $('.portfolioFilter .current').removeClass('current');
         $(this).addClass('current');
- 
+
         var selector = $(this).attr('data-filter');
         $container.isotope({
             filter: selector,
@@ -63,7 +63,7 @@ $(window).load(function(){
             }
          });
          return false;
-    }); 
+    });
 });
 
 
@@ -73,7 +73,7 @@ $(window).load(function(){
 jQuery(function($) {
 	/*var $chosenSheet,
 	$stylesheets = $( "a[id^=theme-]" );
-	
+
 	// run rlightbox
 	$( ".lb" ).rlightbox();
 	$( ".lb_title-overwritten" ).rlightbox({overwriteTitle: true});*/
@@ -89,17 +89,17 @@ $(document).ready(function(e) {
 var index=0;
 $(document).scroll(function(){
 	var top = $('.technical').height()-$(window).scrollTop();
-	console.log(top)
+	//console.log(top)
 	if(top<-150){
-		if(index==0){	
-			
+		if(index==0){
+
 			$('.chart').easyPieChart({
 				easing: 'easeOutBounce',
 				onStep: function(from, to, percent) {
 					$(this.el).find('.percent').text(Math.round(percent));
 				}
 			});
-			
+
 		}
 		index++;
 	}
@@ -111,10 +111,10 @@ $(document).scroll(function(){
 
 // for banner height js
 $(document).ready(function(e)  {
-    var wi = $(window).width();  
-		
+    var wi = $(window).width();
+
 		var wi = $(window).width();
- 
+
         if (wi <= 767){
 			var windowWidth = $(window).width();
 			var windowHeight =$(window).height();
@@ -129,10 +129,10 @@ $(document).ready(function(e)  {
 
 // for banner height js
 $(window).resize(function(){
-  var wi = $(window).width();  
-		
+  var wi = $(window).width();
+
 		var wi = $(window).width();
- 
+
         if (wi <= 767){
 			var windowWidth = $(window).width();
 			var windowHeight =$(window).height();
@@ -153,10 +153,10 @@ $(window).resize(function(){
 
 
 $(document).ready(function(e)  {
-  var wi = $(window).width();  
-		
+  var wi = $(window).width();
+
 		var wi = $(window).width();
- 
+
         if (wi <= 767){
 			$(function() {
 			  $('a[href*=#]:not([href=#])').click(function() {
@@ -197,7 +197,7 @@ $(document).ready(function(e)  {
 
 // chart loding
 $(window).load(function() {
-	
+
 	var chart = window.chart = $('.chart').data('easyPieChart');
 	$('.js_update').on('click', function() {
 		chart.update(Math.random()*100);
@@ -205,4 +205,3 @@ $(window).load(function() {
 });
 
 }(jQuery));
-
