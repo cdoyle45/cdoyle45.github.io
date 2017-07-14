@@ -917,7 +917,7 @@ ul.portfolioContainer li:hover span.hoverBox {
 	visibility:visible;
 	left:0px;
 	bottom: 0px;
-	background: rgba(238, 124, 123, 0.8);
+	background: rgba(71, 55, 109, 0.8);
 	transition-duration: 0.2s;
 	-webkit-transition-duration: 0.2s;
 }
@@ -939,7 +939,7 @@ span.hoverBox .zoom {
 	width:56px;
 	height:56px;
 	background:#ffffff;
-	color:#000000;
+	color:#47376d;
 	position: relative;
 	left:-150%;
 	/*top:40%;*/
@@ -959,12 +959,37 @@ ul.portfolioContainer li:hover span.hoverBox .zoom {
 	transition-duration: 0.2s;
 	-webkit-transition-duration: 0.2s;
 }
-span.hoverBox .linKed {
+span.hoverBox .linked {
 	visibility:hidden;
 	width:56px;
 	height:56px;
 	background:#ffffff;
-	color:#000000;
+	color:#47376d;
+	position: relative;
+	left:-150%;
+	/*top:40%;*/
+	text-align:center;
+	line-height:67px;
+	display: block;
+	float: left;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	transition-duration: 0.2s;
+	-webkit-transition-duration: 0.2s;
+	margin-left:-10px;
+}
+ul.portfolioContainer li:hover span.hoverBox .linked {
+	visibility:visible;
+	left:0%;
+	transition-duration: 0.2s;
+	-webkit-transition-duration: 0.2s;
+}
+span.hoverBox .forked {
+	visibility:hidden;
+	width:56px;
+	height:56px;
+	background:#ffffff;
+	color:#47376d;
 	position: relative;
 	right:-150%;
 	/*top:40%;*/
@@ -978,7 +1003,7 @@ span.hoverBox .linKed {
 	-webkit-transition-duration: 0.2s;
 	margin-right:-10px;
 }
-ul.portfolioContainer li:hover span.hoverBox .linKed {
+ul.portfolioContainer li:hover span.hoverBox .forked {
 	visibility:visible;
 	right:0%;
 	transition-duration: 0.2s;
