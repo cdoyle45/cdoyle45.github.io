@@ -137,6 +137,18 @@ h4.subHeading {
 	max-width:960px;
 	/*padding:0;*/
 	}
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
 /*----------------------------------------------------
  3.	Header Part
 ------------------------------------------------------*/
@@ -192,17 +204,25 @@ header {
 	color:#fff;
 	padding-bottom:42px;
 	}
-.mbnt{
+
+
+.mbtn{
+	padding:16px 22px;
+	font-weight:700;
+	font-family: 'Open Sans', sans-serif;
 	display:inline-block;
 	line-height:52px;
 	color:#fff;
 	font-size:25px;
-	background-color:#;
 	text-transform:uppercase;
 	padding:0 29px;
+	border:3px solid #fff;
+	transition-duration: 0.2s;
+	-webkit-transition-duration: 0.2s;
 	}
-.mbnt:hover{
-	color:#eaeaea;
+.mbtn:hover{
+	background:#ffffff;
+	color:#47376d;
 	text-decoration:none;
 	}
 .bannerText h1 {
@@ -541,7 +561,7 @@ header {
 	min-width: 100%;
 	background-size: cover;
 }
-.bntDownload {
+.btnDownload {
 	font-size:18px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight:700;
@@ -552,7 +572,7 @@ header {
 	transition-duration: 0.2s;
 	-webkit-transition-duration: 0.2s;
 }
-.bntDownload:hover {
+.btnDownload:hover {
 	background:#47376d;
 	color:#ffffff;
 	text-decoration:none;
@@ -1233,7 +1253,7 @@ ul.portfolioContainer li:hover span.hoverBox .forked {
 	font-size:15px;
 	border:#cdc9ce 1px solid;
 }
-.conForm .submitBnt {
+.conForm .submitbtn {
 	background:#ffffff;
 	font-family: 'Open Sans', sans-serif;
 	color:#47376d;
@@ -1251,7 +1271,7 @@ ul.portfolioContainer li:hover span.hoverBox .forked {
 	transition-duration: 0.2s;
 	-webkit-transition-duration: 0.2s;
 }
-.conForm .submitBnt:hover {
+.conForm .submitbtn:hover {
 	background:#47376d;
 	color:#ffffff;
 }
@@ -1529,7 +1549,7 @@ ul.portfolioContainer li:hover span.hoverBox .forked {
  ul.portfolioContainer li.col-xs-6 {
  width:100%;
 }
- .bntDownload {
+ .btnDownload {
  font-size: 13px;
  padding: 16px 14px;
 }
